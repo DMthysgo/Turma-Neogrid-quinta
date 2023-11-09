@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <style>
+        #todo-list {
+            width: 300px;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+        }
+        #task-input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .task-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .task-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="todo-list">
+        <h2>Lista de Tarefas</h2>
+        <input type="text" id="task-input" placeholder="Adicione uma tarefa">
+        <button onclick="addTask()">Adicionar Tarefa</button>
+        <ul id="task-list"></ul>
+    </div>
+
+    <script>
+        const taskInput = document.getElementById('task-input');
+        const taskList = document.getElementById('task-list');
+
+        function addTask() {
+            const taskText = taskInput.value.trim();
+
+            if (taskText === '') {
+                alert('Por favor, insira uma tarefa válida.');
+                return;
+            }
+
+            const taskItem = document.createElement('li');
+            taskItem.className = 'task-item';
+
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+
+            const taskLabel = document.createElement('label');
+            taskLabel.textContent = taskText;
+
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Excluir';
+            deleteButton.onclick = removeTask;
+
+            taskItem.appendChild(checkbox);
+            taskItem.appendChild(taskLabel);
+            taskItem.appendChild(deleteButton);
+
+            taskList.appendChild(taskItem);
+            taskInput.value = '';
+        }
+
+        function removeTask() {
+            const listItem = this.parentNode;
+            taskList.removeChild(listItem);
+        }
+    </script>
+</body>
+</html>

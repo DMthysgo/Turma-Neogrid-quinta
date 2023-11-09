@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Tiro ao Alvo</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #target {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogo de Tiro ao Alvo</h1>
+    <div id="target"></div>
+    <p>Pontuação: <span id="score">0</span></p>
+    
+    <script>
+        const target = document.getElementById('target');
+        const scoreElement = document.getElementById('score');
+        let score = 0;
+
+        target.addEventListener('click', () => {
+            score += 1;
+            updateScore();
+            moveTarget();
+        });
+
+        function moveTarget() {
+            const maxX = window.innerWidth - target.clientWidth;
+            const maxY = window.innerHeight - target.clientHeight;
+
+            const newX = Math.random() * maxX;
+            const newY = Math.random() * maxY;
+
+            target.style.left = newX + 'px';
+            target.style.top = newY + 'px';
+        }
+
+        function updateScore() {
+            scoreElement.textContent = score;
+        }
+
+        moveTarget();
+    </script>
+</body>
+</html>

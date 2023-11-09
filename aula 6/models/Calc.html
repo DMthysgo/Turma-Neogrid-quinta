@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="display">
+    <input type="number" id="variavel1">
+    <input type="number" id="variavel2">
+    <button id="soma" onclick="soma()">+</button>
+    <script>
+        function soma(){
+            const display = document.getElementById("display")
+            const variavel1 = +document.getElementById("variavel1").value
+            const variavel2 = +document.getElementById("variavel2").value
+            display.value = variavel1 + variavel2
+        }
+    </script>
+</body>
+</html>
