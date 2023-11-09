@@ -1,0 +1,1 @@
+var paragrafo = document.getElementById("id")
