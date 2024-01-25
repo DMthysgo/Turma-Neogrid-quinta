@@ -1,0 +1,15 @@
+{
+  "name": "aula-11",
+  "version": "1.0.0",
+  "description": "Aula do dia 25 de janeiro de 2024",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Thyago Melo",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
