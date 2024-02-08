@@ -22,8 +22,10 @@ app.use((req, res, next) => {
 
 // rotas da API
 const funkoRoutes = require("./routes/funkoRoutes");
+const bolsaRoutes = require("./routes/bolsaRoutes");
 
 app.use("/funko", funkoRoutes);
+app.use("/bolsa", bolsaRoutes);
 
 // rotas iniciais / endpoints
 app.get("/", (req, res) => {
