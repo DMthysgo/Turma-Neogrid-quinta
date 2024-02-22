@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #fff;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+
+.header{
+    height: 10px;
+    max-width: 100%;
+    background-color: rgb(19, 136, 35);
+}
+
+
+.section-login{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 355px;
+    height: 320px;
+    border-radius: 10px;
+    padding: 35px;
+    box-shadow: 1px 1px 2px rgb(146, 137, 137);
+}
+
+.span-required {
+    font-size: 12px;
+    margin: 10px 0 0 1px;
+    display: none;
+}
+
+.login form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+}
+
+.login input{
+    margin-top: 10px;
+    padding-left: 10px;
+    background-color: #fff;
+    font-family: sans-serif;
+    color: #737373;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    height: 45px;
+    box-shadow: 1px 1px 2px rgb(146, 137, 137);
+}
+
+.login h2{
+    color: rgb(19, 136, 35);
+    margin-bottom: 40px;
+}
+
+.login input::placeholder{
+    color: #737373;
+    font-size: 14px;
+}
+
+.login form [type="submit"]{
+    display: block;
+    background-color: rgb(19, 136, 35);
+    color: #fff;
+    font-size: 15px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login p{
+    color: #737373;
+    margin-top: 10px;
+}
+
+.login a{
+    text-decoration: none;
+    color: #CD1E1E;
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 500px){
+    .login{
+        box-shadow:none;
+    }
+}

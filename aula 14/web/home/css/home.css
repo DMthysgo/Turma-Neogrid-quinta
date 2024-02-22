@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.barra-superior {
+  height: 10px;
+  width: 100%;
+  background-color: rgb(19, 136, 35);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#titulo {
+  color: rgb(19, 136, 35);
+  padding: 30px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 40px;
+}
+
+.ficha-rpg {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ficha-rpg form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.ficha-rpg form label,
+.ficha-rpg form input {
+  margin: 5px;
+}

@@ -18,6 +18,7 @@ app.use(
 app.use(express.json());
 
 // Middlewares
+app.use(express.static("web"));
 app.use((req, res, next) => {
   console.log(`Request Type: ${req.method}`);
   console.log(`Content Type: ${req.headers["content-type"]}`);
@@ -27,10 +28,14 @@ app.use((req, res, next) => {
 });
 
 // rota pública - rota aberta - página login
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/web/login/login.html");
+});
 
 // rotas privadas - rota fechada
 app.get("/Home?:user", (req, res) => {
   const user = req.params.user;
+  res.sendFile(__dirname + "/web/home/home.html");
 });
 
 app.post("/user/:user", checkToken, async (req, res) => {

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro</title>
+    <link rel="stylesheet" href="/Cadastro/css/cadastro.css">
+</head>
+<body>
+    <div class="header"></div>
+
+    <div class="section-cadastro">
+        <div class="cadastro">
+            <div>
+                <h2>Cadastro</h2>
+            </div>
+
+            <form id="form">
+                <div class="inputs">
+                    <input type="text" name="name" placeholder="seu nome" autofocus class="required" oninput="nameValidation()" id="nome" required>
+                    <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
+                </div>
+
+                <div class="inputs">
+                    <input type="text" name="email" placeholder="seu email" autofocus class="required" oninput="emailValidate()" id="email" required>
+                    <span class="span-required">Digite um E-mail válido</span>
+                </div>
+
+                <div class="inputs">
+                    <input type="password" name="senha" placeholder="sua senha" class="required" oninput="senhaValidate()" id="senha" required>
+                    <span class="span-required">Digite uma senha com no mínimo 8 caracteres</span>
+                </div>
+
+                <div class="inputs">
+                    <input type="password" name="senhaConfirme" placeholder="confirme sua senha" class="required" oninput="compareSenha()" id="conf_senha" required>
+                    <span class="span-required">As senhas devem ser compatíveis</span>
+                </div>
+
+                <input type="submit" value="Criar">
+            </form>
+
+            <p>Voltar à página de login? <a href="/login/login.html">Clique aqui!</a></p>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+
+    <script src="/Cadastro/js/scripts.js"></script>
+</body>
+</html>

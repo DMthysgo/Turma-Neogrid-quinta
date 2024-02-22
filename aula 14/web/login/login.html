@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="/login/css/login.css" />
+  </head>
+  <body>
+    <div class="header"></div>
+
+    <div class="section-login">
+      <div class="login">
+        <div class="img">
+          <h2>Login</h2>
+        </div>
+
+        <form id="form">
+          <div class="inputs">
+            <input
+              type="User"
+              name="User"
+              placeholder="seu user"
+              autofocus
+              class="required"
+              id="user"
+              required
+            />
+            <span class="span-required">Digite um Usuário válido</span>
+          </div>
+
+          <div class="inputs">
+            <input
+              type="password"
+              name="senha"
+              placeholder="sua senha"
+              class="required"
+              oninput="senhaValidate()"
+              id="senha"
+              required
+            />
+            <span class="span-required"
+              >Digite uma senha com no mínimo 8 caracteres</span
+            >
+          </div>
+
+          <input type="submit" value="entrar" />
+        </form>
+        <p>
+          Ainda não tem conta? <a href="/Cadastro/cadastro.html">Criar Conta</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer"></div>
+
+    <script src="/login/js/script.js"></script>
+  </body>
+</html>

@@ -3,9 +3,169 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Ficha de RPG</title>
+    <link rel="stylesheet" href="css/home.css" />
   </head>
   <body>
-    <h1>Essa é a HOMEPAGE</h1>
+    <div class="barra-superior"></div>
+    <div class="container">
+      <h1 id="titulo"></h1>
+    </div>
+    <div class="ficha-rpg">
+      <h2>Ficha de RPG</h2>
+      <form>
+        <input
+          type="text"
+          id="nome-personagem"
+          name="nome-personagem"
+          placeholder="Nome do Personagem"
+          required
+        />
+        <select id="classe" name="classe" required>
+          <option value="Bárbaro">Bárbaro</option>
+          <option value="Bardo">Bardo</option>
+          <option value="Bruxo">Bruxo</option>
+          <option value="Clérigo">Clérigo</option>
+          <option value="Druida">Druida</option>
+          <option value="Feiticeiro">Feiticeiro</option>
+          <option value="Guerreiro">Guerreiro</option>
+          <option value="Ladino">Ladino</option>
+          <option value="Mago">Mago</option>
+          <option value="Monge">Monge</option>
+          <option value="Paladino">Paladino</option>
+          <option value="Patrulheiro">Patrulheiro</option>
+        </select>
+        <input type="lvl" id="nivel" name="nivel" disabled /><br /><br />
+        <label for="antecedente">Antecedente:</label>
+        <input
+          type="text"
+          id="antecedente"
+          name="antecedente"
+          required
+        /><br /><br />
+
+        <label for="nome-jogador">Nome do Jogador:</label>
+        <input
+          type="text"
+          id="nome-jogador"
+          name="nome-jogador"
+          required
+        /><br /><br />
+
+        <label for="raca">Raça:</label>
+        <input type="text" id="raca" name="raca" required /><br /><br />
+
+        <label for="alinhamento">Alinhamento:</label>
+        <input
+          type="text"
+          id="alinhamento"
+          name="alinhamento"
+          required
+        /><br /><br />
+
+        <label for="exp">Pontos de Experiência:</label>
+        <input type="number" id="exp" name="exp" required /><br /><br />
+
+        <label for="bonus-proficiencia">Bônus de Proficiência:</label>
+        <input
+          type="number"
+          id="bonus-proficiencia"
+          name="bonus-proficiencia"
+          required
+        /><br /><br />
+
+        <label for="inspiracao">Inspiração:</label>
+        <input type="checkbox" id="inspiracao" name="inspiracao" /><br /><br />
+
+        <label for="forca">Força:</label>
+        <input type="number" id="forca" name="forca" required /><br /><br />
+
+        <label for="mod-forca">Modificador de Força:</label>
+        <input
+          type="number"
+          id="mod-forca"
+          name="mod-forca"
+          required
+        /><br /><br />
+
+        <label for="destreza">Destreza:</label>
+        <input
+          type="number"
+          id="destreza"
+          name="destreza"
+          required
+        /><br /><br />
+
+        <label for="mod-destreza">Modificador de Destreza:</label>
+        <input
+          type="number"
+          id="mod-destreza"
+          name="mod-destreza"
+          required
+        /><br /><br />
+
+        <label for="constituicao">Constituição:</label>
+        <input
+          type="number"
+          id="constituicao"
+          name="constituicao"
+          required
+        /><br /><br />
+
+        <label for="mod-constituicao">Modificador de Constituição:</label>
+        <input
+          type="number"
+          id="mod-constituicao"
+          name="mod-constituicao"
+          required
+        /><br /><br />
+
+        <label for="inteligencia">Inteligência:</label>
+        <input
+          type="number"
+          id="inteligencia"
+          name="inteligencia"
+          required
+        /><br /><br />
+
+        <label for="mod-inteligencia">Modificador de Inteligência:</label>
+        <input
+          type="number"
+          id="mod-inteligencia"
+          name="mod-inteligencia"
+          required
+        /><br /><br />
+
+        <label for="sabedoria">Sabedoria:</label>
+        <input
+          type="number"
+          id="sabedoria"
+          name="sabedoria"
+          required
+        /><br /><br />
+
+        <label for="mod-sabedoria">Modificador de Sabedoria:</label>
+        <input
+          type="number"
+          id="mod-sabedoria"
+          name="mod-sabedoria"
+          required
+        /><br /><br />
+
+        <label for="carisma">Carisma:</label>
+        <input type="number" id="carisma" name="carisma" required /><br /><br />
+
+        <label for="mod-carisma">Modificador de Carisma:</label>
+        <input
+          type="number"
+          id="mod-carisma"
+          name="mod-carisma"
+          required
+        /><br /><br />
+
+        <input type="submit" value="Enviar" />
+      </form>
+    </div>
+    <script src="/Home/js/script.js"></script>
   </body>
 </html>
